@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Treatment Calculator</title>
+        <link rel="stylesheet" href="../static/css/main.css">
+    </head>
+    <body>
+        <div class="container" text-align="center">
+            <h1>Treatment Expense Calculator</h1>
+            <h3>Please enter the following information: </h3>
+            <form action="{{url_for('results')}}" method="POST" align=center>
+                <input title="Name" placeholder="Name" type="text" name="form_name" required><br> 
+                <input title="Address" placeholder="Address" type="text" name="form_address" required><br>
+                                     
+                <p>Please select a treatment:</p>    
+                    <select title = "Treatment" name="form_treatment" required>
+                        <option value="Massage">Massage</option>
+                        <option value="Physio">Physio</option>
+                        <option value="Active Rehabilitation">Active Rehabilitation</option>
+                        <option value="Acupuncture">Acupuncture</option>                        
+                    </select><br>
+                <input title="Treatment Location" placeholder="Treatment Location" type="string" name="form_place" required><br>                          
+                <input title="Number of sessions" placeholder="Number of Sessions" type="number" name="form_sessions" required><br>                      
+                <input title="Cost per session" placeholder="Cost per Session" type="number" name="form_costs" required><br><br>                                    
+                <button type="submit"> Submit </button>
+            </form>
+        </div>
+    </body>
+</html>
